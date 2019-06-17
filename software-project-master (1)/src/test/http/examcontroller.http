@@ -1,0 +1,46 @@
+
+# 添加考试
+POST http://localhost:8080/api/admin/invigilation/exams
+token:ae6b9dbceef4b0428313523ad2de74397cf6a31e88414ede957d4add59be71305d758b926c1fce69b1406e01bccb983b
+Content-Type: application/json
+
+{
+  "name": "test4",
+  "beginTime": "2019-06-06 13:00:00",
+  "endTime": "2019-06-06 15:00:00",
+  "location": "003",
+  "numbersOfTeacher": 2
+}
+
+###
+
+# 修改考试
+PATCH http://localhost:8080/api/admin/invigilation/exams/1
+token:ae6b9dbceef4b0428313523ad2de74397cf6a31e88414ede957d4add59be71305d758b926c1fce69b1406e01bccb983b
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "modify",
+  "beginTime": "2019-06-06 13:00:00",
+  "endTime": "2019-06-06 15:00:00",
+  "location": "003",
+  "numbersOfTeacher": 2
+}
+
+###
+
+# 普通用户操作 : 403 无权限
+POST http://localhost:8080/api/admin/invigilation/exams
+token: ea65098d334033f3391d50c76686329fc4dac73cee35367d63e3958d71c9c19486027abb63408656e66826c52c5ee734
+Content-Type: application/json
+
+{
+  "name": "test?",
+  "beginTime": "2019-06-06 13:00:00",
+  "endTime": "2019-06-06 15:00:00",
+  "location": "005",
+  "numbersOfTeacher": 2
+}
+
+###
