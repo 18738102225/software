@@ -10,12 +10,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-/**
- * @program: software-project
- * @description: 初始化管理员
- * @author: zhanyeye
- * @create: 2019-06-11 09:11
- */
+
 @Slf4j
 @Component
 @Transactional

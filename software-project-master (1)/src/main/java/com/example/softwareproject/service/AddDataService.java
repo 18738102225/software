@@ -8,12 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 
-/**
- * @program: software-project
- * @description: 初始化数据
- * @author: zhanyeye
- * @create: 2019-06-09 10:32
- */
+
 @Service
 @Transactional  //要加事务，不然 refresh() 时会 Entity not managed
 public class AddDataService {

@@ -8,12 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-/**
- * @program: software-project
- * @description: 用户逻辑管理
- * @author: zhanyeye
- * @create: 2019-06-10 12:55
- */
+
 @Service
 @Transactional
 public class UserService {

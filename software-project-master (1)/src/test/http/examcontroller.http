@@ -5,11 +5,11 @@ token:ae6b9dbceef4b0428313523ad2de74397cf6a31e88414ede957d4add59be71305d758b926c
 Content-Type: application/json
 
 {
-  "name": "test4",
-  "beginTime": "2019-06-06 13:00:00",
-  "endTime": "2019-06-06 15:00:00",
-  "location": "003",
-  "numbersOfTeacher": 2
+  "name": "617",
+  "beginTime": "2019-06-17 13:00:00",
+  "endTime": "2019-06-17 15:00:00",
+  "location": "009",
+  "numbersOfTeacher": 1
 }
 
 ###
@@ -20,13 +20,31 @@ token:ae6b9dbceef4b0428313523ad2de74397cf6a31e88414ede957d4add59be71305d758b926c
 Content-Type: application/json
 
 {
-  "id": 1,
+  "id": 7,
   "name": "modify",
   "beginTime": "2019-06-06 13:00:00",
   "endTime": "2019-06-06 15:00:00",
-  "location": "003",
-  "numbersOfTeacher": 2
+  "location": "004",
+  "numbersOfTeacher": 1
 }
+
+###
+# 删除考试
+DELETE http://localhost:8080/api/admin/invigilation/exams/7
+token:ae6b9dbceef4b0428313523ad2de74397cf6a31e88414ede957d4add59be71305d758b926c1fce69b1406e01bccb983b
+
+###
+
+# 分配考试监考
+GET http://localhost:8080/api/admin/invigilation/exam_details/12/12
+token:ae6b9dbceef4b0428313523ad2de74397cf6a31e88414ede957d4add59be71305d758b926c1fce69b1406e01bccb983b
+
+###
+
+# 删除考试监考
+DELETE http://localhost:8080/api/admin/invigilation/exam_details/7
+token:ae6b9dbceef4b0428313523ad2de74397cf6a31e88414ede957d4add59be71305d758b926c1fce69b1406e01bccb983b
+
 
 ###
 
